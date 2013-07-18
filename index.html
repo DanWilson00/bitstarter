@@ -21,6 +21,19 @@
       border-left: 1px white solid;
       }
       }
+
+      /* Landscape phones and down */
+      @media (max-width: 480px) {
+      .copy {
+       padding: 2.5% 10%;
+      }
+      .linediv-l {
+       border-bottom: 1px white solid;
+      }
+      .linediv-r {
+       border-top: 1px white solid;
+      }
+      }
       
       /* All form factors */
       
@@ -60,35 +73,24 @@
         color: white;
       }
 
-      body {
-        padding-top: 20px;
-        padding-bottom: 40px;
+      /* Marketing Copy and footer */
+      .copy {
+       padding-top: 2.5%;
+       padding-botton: 2.5%;
+       text-align: justify;
       }
-      .container {
-        width: 960px;
+      .asset {
+       padding: 2.5% 0%;
       }
-      p.lead {
-        padding-top: 15px;
+      .footer {
+       color: #cccccc;
+       text-align: center;
       }
-      .navigation, .pitch, .section1, .section2, .faq, .footer {
-        padding: 10px 0px 10px 0px;
+      .footer p {
+       font-size: 11px;
       }
-      .video, .thermometer, .order, .social {
-        border: 1px dotted;
-        text-align: center;
-      }
-      .video {
-        /* Internal borders have 1px wifth, thus need to add 4 x 1px to 120px. */
-        height: 124px;
-        line-height: 124px;
-      }
-      .thermometer, .order, .social {
-        /* line-height to vertically center: http://phrogz.net/css/vertical-align/index.html */
-        height: 40px;
-        line-height: 40px;
-      }
-      div.row {
-        border: 1px solid;
+      . footer a {
+       color: #ccccff;
       }
     </style>
   </head>
@@ -147,61 +149,104 @@
 		  </div>
 		</div>
 		<div class="span4">
-		  <div class="linediv-c">
+		  <div class="linediv-r">
 		    <h3>10</h3> <p>days left</p>
 		  </div>
 		</div>
 	      </div>
 	    </div>
+	    <div class="span10 offset1">
+	      <!-- Boostrap progress bar -->
+	      <!-- http://twitter.github.io/bootstrap/components.html#progress -->
+	      <div class="thermometer progress active">
+		<div class="bar bar-success" style="width: 60%;"></div>
+		<div class="bar bar-warning" styke="width: 40%;"></div>
+	      </div>
+	    </div>
+	    <div class="span6 offset3 order">
+	      <!-- Bootstrap button -->
+	      <button class="btn btn-success btn-large">Preorder</button>
+	    </div>
+	    <div class="span8 offset2 social">
+	      <!-- SOcial buttons are not incldeed in bootstrap -->
+	      <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+	      <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+	    </div>
+	  </div>
+	</div>
 
+	<!-- Marketing copy starts now -->
+	<div class="row-fluid section1">
+	  <div class="span5 offset1 asset">
+	    <img class="img-polaroid" src="http://placehold.it/480x300">
+	  </div>
+	  <div class="span5 copy">
+	    <p>
+	      dfsjndndsfjkdsfnjkdsfnjdsf  djfnsd sdjfnsdkjn sdfjknsdjk
+	      sdfjknsdfjknsdjk jksdnfgjksdnjk nsdkjfnsd dsjfnsdkjfn
+	      sdfjlnsdjlfn dlfjlsdnfldns jlsdfnjlsdfnlsdjnfjlsdnfjlsd
+	    </p>
+	  </div>
+	</div>
 
-      </div>
-      <div class="row heading">
-	<div class="span12">
-	  <h1>Bitstarter Title</h1>
-	</div>
-      </div>
-      <div class="row subheading">
-	<div class="span12">
-	  <p class="lead">This is my first bitstarter project.</p>
-	</div>
-      </div>
-      <div class="row pitch">
-	<div class="span6 video">
-	  Video
-	</div>
-	<div class="span6">
-	  <div class="thermometer">
-	    Thermometer
+	<div class="row-fluid section2">
+	  <div class="span5 offset1 copy copy-right">
+	    <p>
+	      ljfdklfnsdl dsfjln ds fsd jksdfbsdf skdf sd
+	      dfjsdnj dsgjsdjk jksdfbsdk bsdkgjb fjks sdjkg bsdk
+	      sdsdgbsdkj bdjkssdgjb jksdbgk sdkgjb sdjkgbsdk sdgjbsd
+	    </p>
 	  </div>
-	  <div class="order">
-	    Order
-	  </div>
-	  <div class="social">
-	    Social
+	  <div class="span5 offset">
+	    <img class="img-polaroid" src="http://placehold.it/480x300">
 	  </div>
 	</div>
-      </div>
-      <div class="row section1">
-	<div class="span12">
-	  Marketing Section 1
+
+	<!-- Now we use some JS using the accordian. This uses jquery.js etc -->
+	<div class="row-fluid faq">
+	  <div class="span10 offset1">
+	    <h3>FAQ</h3>
+	    <div class="accordian" id="accordian2">
+	      <div class="accordian-group">
+		<div class="accordian-heading">
+		  <a class="accordian-toggle" data-toggle="collapse"
+		     data-parent="#accordian2" href="#collapseOne">
+		    What does FAQ stand for?
+		  </a>
+		</div>
+		<div id="collapseOne" class="accordian-body collapse">
+		  <div class="accordian-inner">
+		    Frequently Asked Question.
+		  </div>
+		</div>
+	      </div>
+	      <div class="accordian-group">
+		<div class="accordian-heading">
+		  <a class="accordian-toggle" data-toggle="collapse"
+		     data-parent="#accordian2" href="#collapseTwo">
+		    What does FAQ stand for?
+		  </a>
+		</div>
+		<div id="collapseTwo" class="accordian-body collapse">
+		  <div class="accordian-inner">
+		    A question that is commpnly asked.
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+
 	</div>
-      </div>
-      <div class="row section2">
-	<div class="span12">
-	  Marketing Section 2
+
+	<!-- Not crucial but license stuff -->
+	<div class="row-fluid footer">
+	  <div class="span12">
+	    <p>This work is licensed under
+	      the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+		By-SA 3.0
+		</a>, without all the cruft that would otherwise be put at the bottom of the page.</p>
+	  </div>
 	</div>
-      </div>
-      <div class="row faq">
-	<div class="span12">
-	  FAQ
-	</div>
-      </div>
-      <div class="row footer">
-	<div class="span12">
-	  Footer
-	</div>
-      </div>
     </div>
   </body>
 </html>
